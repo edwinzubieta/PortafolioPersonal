@@ -176,7 +176,9 @@ ul {
   padding: 64px 0;
   text-align: center;
   background-color: #1E2130;
+  margin-top: 10px;
   margin-bottom: 48px;
+  border-radius: 10px;
 }
 
 .hero__container {
@@ -227,6 +229,7 @@ ul {
   font-weight: bold;
   color: #00F0FF;
   margin-bottom: 8px;
+  text-shadow: 0 0 5px #00F0FF;
 }
 
 .stat__label {
@@ -371,14 +374,23 @@ ul {
 
 .values__list {
   padding: 0 60px;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
 }
 
 .values__item {
-  padding: 16px;
-  margin-bottom: 16px;
+  
+  width: 150px;
+  height: 188px;
+  min-width: 150px;
+  padding: 10px;
+  margin: 5px;
+  margin-bottom: 5px;
   background-color: #f8f9fa;
   border: 1px solid #e0e0e0;
   border-radius: 10px;
+  
 }
 
 .values__item:hover {
@@ -389,11 +401,11 @@ ul {
 
 .values__icon {
   font-size: 24px;
-  margin-right: 12px;
+  margin: 12px;
 }
 
 .values__item strong {
-  margin-right: 8px;
+  margin: 8px;
 }
 
 .values__item span {
@@ -674,6 +686,12 @@ ul {
 .contact__link {
   color: #00F0FF;
   font-weight: 600;
+}
+
+.contact__link:hover {
+  color: #00F0FF;
+  text-decoration: none;
+  text-shadow: 0 0 15px #00F0FF;
 }
 
 /* ===========================================
