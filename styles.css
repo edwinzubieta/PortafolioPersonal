@@ -77,7 +77,9 @@ strong {
 a {
   font-family: "Roboto mono", sans-serif;
   color: #00F0FF;
+  transition: all 0.3s ease;
   text-decoration: none;
+  
 }
 
 a:hover {
@@ -199,6 +201,7 @@ ul {
   color: #ffffff;
   margin-bottom: 24px;
   font-weight: 600;
+  margin-bottom: 48px;
 }
 
 .hero__description {
@@ -210,8 +213,73 @@ ul {
   margin-right: auto;
 }
 
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__content img {
+  display: none;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+}
+
 .hero__actions {
   margin-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .hero__content {
+    display: grid;
+    align-items: center;
+    grid-template-areas:
+      "text img"
+      "buttons img"
+    ;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 48px;
+  }
+
+  .hero__content p {
+    grid-area: text;
+    font-size: 22px;
+    color: #B0B3C7;
+    max-width: 400px;
+    justify-self: center;
+  }
+
+  .hero__actions {
+    grid-area: buttons;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .hero__img-link {
+  display: block;
+  grid-area: img;
+}
+
+  .hero__content img {
+    display: block;
+    grid-area: img;
+    width: 100%;
+    max-width: 325px;
+    justify-self: center;
+
+  }
+
+  .hero__content img:hover {
+    border-color: #00F0FF;
+    box-shadow: 0 0 15px #00F0FF;
+    transform: scale(1.05);
+    
+  }
 }
 
 .hero__stats {
@@ -361,7 +429,7 @@ ul {
      =========================================== */
 .values {
   margin-top: 48px;
-  padding: 50;
+  padding: 40;
 }
 
 .values__title {
@@ -382,11 +450,12 @@ ul {
   height: 188px;
   min-width: 150px;
   padding: 10px;
-  margin: 5px;
+  margin: 10px;
   margin-bottom: 5px;
   background-color: #f8f9fa;
   border: 1px solid #e0e0e0;
   border-radius: 10px;
+  transition: all 0.3s ease;
 
 }
 
